@@ -4,7 +4,7 @@ env:
   parameter-store:
     DOCKER_REGISTRY_USERNAME: /mypythonapp/docker-username/harikumar1997
     DOCKER_REGISTRY_PASSWORD: /mypythonapp/docker-credentials/harikumar@1997
-    DOCKER_REGISTRY_URL: /hub.docker.com/repositories/harikumar1997
+    #DOCKER_REGISTRY_URL: /mypythonapp/docker-registry/url
 phases:
   install:
     runtime-versions:
@@ -17,7 +17,7 @@ phases:
     commands:
       - echo "Running tests..."
       - echo "Building Docker image..."
-      - echo "$DOCKER_REGISTRY_PASSWORD" | docker login -u "$DOCKER_REGISTRY_USERNAME" --password-stdin "$DOCKER_REGISTRY_URL"
+      - echo "$DOCKER_REGISTRY_PASSWORD" | docker login -u "$DOCKER_REGISTRY_USERNAME" --password-stdin #"$DOCKER_REGISTRY_URL"
       - docker build -t "$DOCKER_REGISTRY_URL/$DOCKER_REGISTRY_USERNAME/simple-python-flask-app:latest" .
       - docker push "$DOCKER_REGISTRY_URL/$DOCKER_REGISTRY_USERNAME/simple-python-flask-app:latest"
   post_build:
