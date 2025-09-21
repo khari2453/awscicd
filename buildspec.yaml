@@ -2,9 +2,9 @@ version: 0.2
 
 env:
   parameter-store:
-    DOCKER_REGISTRY_USERNAME: /mypythonapp/docker-username/username
-    DOCKER_REGISTRY_PASSWORD: /mypythonapp/docker-credentials/harikumar1997
-    DOCKER_REGISTRY_URL: /mypythonapp/docker-url/registery-url
+    DOCKER_REGISTRY_USERNAME: /mypythonapp/docker-username/harikumar1997
+    DOCKER_REGISTRY_PASSWORD: /mypythonapp/docker-credentials/harikumar@1997
+    DOCKER_REGISTRY_URL: /hub.docker.com/repositories/harikumar1997
 phases:
   install:
     runtime-versions:
