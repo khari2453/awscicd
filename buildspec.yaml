@@ -12,7 +12,7 @@ phases:
   pre_build:
     commands:
       - echo "Installing dependencies..."
-      - pip install -r awscicd/requirement.txt
+      - pip3.11 install -r awscicd/requirement.txt
   build:
     commands:
       - echo "Running tests..."
