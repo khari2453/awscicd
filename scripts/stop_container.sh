@@ -4,17 +4,19 @@
 #docker stop simple-python-flask-app
 #echo "Hi"
 
-#!/bin/bash
+
+
 set -e
 export PATH=$PATH:/usr/bin
 
-CONTAINER_NAME=simple-python-flask-app
+CONTAINER_NAME=flaskapp
 
-if [ "$(docker ps -q -f name=$CONTAINER_NAME)" ]; then
+# Stop container if it exists
+if [ "$(docker ps -aq -f name=$CONTAINER_NAME)" ]; then
     echo "Stopping container $CONTAINER_NAME..."
-    docker stop $CONTAINER_NAME
-    docker rm $CONTAINER_NAME
+    docker stop $CONTAINER_NAME || true
+    docker rm $CONTAINER_NAME || true
 else
-    echo "No running container named $CONTAINER_NAME found, skipping stop."
+    echo "No container named $CONTAINER_NAME found, skipping stop."
 fi
 
