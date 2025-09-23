@@ -6,8 +6,6 @@
 
 #docker run -d -p 5000:5000 harikumar1997/simple-python-flask-app
 #echo
-#!/bin/bash
-#!/bin/bash
 set -e
 export PATH=$PATH:/usr/bin
 
