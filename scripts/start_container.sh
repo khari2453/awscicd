@@ -7,10 +7,11 @@
 #docker run -d -p 5000:5000 harikumar1997/simple-python-flask-app
 #echo
 #!/bin/bash
+#!/bin/bash
 set -e
 export PATH=$PATH:/usr/bin
 
-CONTAINER_NAME=simple-python-flask-app
+CONTAINER_NAME=flaskapp
 IMAGE_NAME=harikumar1997/simple-python-flask-app
 
 # Remove old container if exists
